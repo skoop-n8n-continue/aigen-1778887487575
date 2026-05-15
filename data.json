@@ -1,0 +1,375 @@
+{
+  "app_id": "aigen-1778887487575",
+  "document_version": 1,
+  "sections": {
+    "storefront": {
+      "chain_name": {
+        "type": "text",
+        "label": "Chain Name",
+        "value": "Forge Burgers"
+      },
+      "tagline": {
+        "type": "text",
+        "label": "Tagline",
+        "value": "Crafted Over Flame"
+      },
+      "logo": {
+        "type": "file",
+        "label": "Logo",
+        "value": "assets/logo_k7m2x9.png",
+        "meta": {
+          "accepted_formats": ["png", "jpg", "svg"],
+          "path": "assets/"
+        }
+      }
+    },
+    "app_settings": {
+      "primary_color": {
+        "type": "color",
+        "label": "Primary Color",
+        "value": "#ff6b35"
+      },
+      "accent_color": {
+        "type": "color",
+        "label": "Accent Color",
+        "value": "#f4a261"
+      },
+      "background_color": {
+        "type": "color",
+        "label": "Background Color",
+        "value": "#1a1a1a"
+      },
+      "text_color": {
+        "type": "color",
+        "label": "Text Color",
+        "value": "#ffffff"
+      },
+      "lunch_start_hour": {
+        "type": "number",
+        "label": "Lunch Rush Start (24h)",
+        "value": 11,
+        "meta": {
+          "format": "integer"
+        }
+      },
+      "lunch_end_hour": {
+        "type": "number",
+        "label": "Lunch Rush End (24h)",
+        "value": 14,
+        "meta": {
+          "format": "integer"
+        }
+      },
+      "late_start_hour": {
+        "type": "number",
+        "label": "Late Night Start (24h)",
+        "value": 21,
+        "meta": {
+          "format": "integer"
+        }
+      },
+      "show_prices": {
+        "type": "boolean",
+        "label": "Show Prices",
+        "value": true
+      }
+    },
+    "locations": {
+      "type": "collection",
+      "label": "Locations",
+      "item_schema": {
+        "id": {
+          "type": "text",
+          "label": "ID"
+        },
+        "name": {
+          "type": "text",
+          "label": "Location Name"
+        },
+        "address": {
+          "type": "text",
+          "label": "Address"
+        }
+      },
+      "value": [
+        {
+          "id": "loc_d1w2n3",
+          "name": "Downtown",
+          "address": "123 Main St, Metro City"
+        },
+        {
+          "id": "loc_r4x5y6",
+          "name": "Riverside",
+          "address": "456 River Rd, Metro City"
+        }
+      ]
+    },
+    "categories": {
+      "type": "collection",
+      "label": "Menu Categories",
+      "item_schema": {
+        "id": {
+          "type": "text",
+          "label": "ID"
+        },
+        "name": {
+          "type": "text",
+          "label": "Category Name"
+        }
+      },
+      "value": [
+        {
+          "id": "cat_b1u2r3",
+          "name": "Burgers"
+        },
+        {
+          "id": "cat_s4i5d6",
+          "name": "Sides"
+        },
+        {
+          "id": "cat_d7r8i9",
+          "name": "Drinks"
+        }
+      ]
+    },
+    "menu_items": {
+      "type": "collection",
+      "label": "Menu Items",
+      "item_schema": {
+        "id": {
+          "type": "text",
+          "label": "ID"
+        },
+        "name": {
+          "type": "text",
+          "label": "Item Name"
+        },
+        "description": {
+          "type": "textarea",
+          "label": "Description"
+        },
+        "price": {
+          "type": "number",
+          "label": "Price",
+          "meta": {
+            "format": "currency"
+          }
+        },
+        "category": {
+          "type": "linked",
+          "label": "Category",
+          "meta": {
+            "collection": "categories",
+            "display_field": "name"
+          }
+        },
+        "image": {
+          "type": "file",
+          "label": "Item Image",
+          "meta": {
+            "accepted_formats": ["png", "jpg"],
+            "path": "assets/"
+          }
+        }
+      },
+      "value": [
+        {
+          "id": "item_c1l2a3",
+          "name": "Classic Forge",
+          "description": "Beef patty, American cheese, pickles, onion, special sauce",
+          "price": 9.49,
+          "category": "cat_b1u2r3",
+          "image": "assets/burger_classic_d4e5f6.png"
+        },
+        {
+          "id": "item_s4p5i6",
+          "name": "Spicy Jalapeño",
+          "description": "Pepper jack, bacon, grilled jalapeños, chipotle mayo",
+          "price": 11.99,
+          "category": "cat_b1u2r3",
+          "image": "assets/burger_spicy_g7h8i9.png"
+        },
+        {
+          "id": "item_d7o8u9",
+          "name": "Double Stack",
+          "description": "Two smash patties, cheddar, caramelized onions, Forge sauce",
+          "price": 13.49,
+          "category": "cat_b1u2r3",
+          "image": "assets/burger_double_p7q8r9.png"
+        },
+        {
+          "id": "item_f1r2i3",
+          "name": "Crispy Fries",
+          "description": "Hand-cut potatoes, sea salt, choice of sauce",
+          "price": 4.99,
+          "category": "cat_s4i5d6",
+          "image": "assets/fries_j1k2l3.png"
+        },
+        {
+          "id": "item_m4i5l6",
+          "name": "Vanilla Shake",
+          "description": "Creamy vanilla bean milkshake, whipped cream",
+          "price": 5.99,
+          "category": "cat_d7r8i9",
+          "image": "assets/milkshake_m4n5o6.png"
+        }
+      ]
+    },
+    "daily_specials": {
+      "type": "collection",
+      "label": "Daily Specials",
+      "item_schema": {
+        "id": {
+          "type": "text",
+          "label": "ID"
+        },
+        "name": {
+          "type": "text",
+          "label": "Special Name"
+        },
+        "description": {
+          "type": "textarea",
+          "label": "Description"
+        },
+        "price": {
+          "type": "number",
+          "label": "Special Price",
+          "meta": {
+            "format": "currency"
+          }
+        },
+        "image": {
+          "type": "file",
+          "label": "Special Image",
+          "meta": {
+            "accepted_formats": ["png", "jpg"],
+            "path": "assets/"
+          }
+        }
+      },
+      "value": [
+        {
+          "id": "spec_t1o2d3",
+          "name": "Truffle Mushroom Melt",
+          "description": "Swiss cheese, sautéed mushrooms, truffle aioli on brioche",
+          "price": 12.99,
+          "image": "assets/burger_double_p7q8r9.png"
+        },
+        {
+          "id": "spec_b4a5c6",
+          "name": "BBQ Bacon Ranch",
+          "description": "Cheddar, crispy bacon, tangy BBQ, cool ranch drizzle",
+          "price": 11.49,
+          "image": "assets/burger_spicy_g7h8i9.png"
+        }
+      ]
+    },
+    "lunch_combos": {
+      "type": "collection",
+      "label": "Lunch Combos",
+      "item_schema": {
+        "id": {
+          "type": "text",
+          "label": "ID"
+        },
+        "name": {
+          "type": "text",
+          "label": "Combo Name"
+        },
+        "description": {
+          "type": "textarea",
+          "label": "Includes"
+        },
+        "price": {
+          "type": "number",
+          "label": "Combo Price",
+          "meta": {
+            "format": "currency"
+          }
+        },
+        "original_price": {
+          "type": "number",
+          "label": "Regular Price",
+          "meta": {
+            "format": "currency"
+          }
+        },
+        "image": {
+          "type": "file",
+          "label": "Combo Image",
+          "meta": {
+            "accepted_formats": ["png", "jpg"],
+            "path": "assets/"
+          }
+        }
+      },
+      "value": [
+        {
+          "id": "combo_l1u2n3",
+          "name": "Forge Classic Combo",
+          "description": "Classic Forge + Fries + Drink",
+          "price": 13.99,
+          "original_price": 16.47,
+          "image": "assets/burger_classic_d4e5f6.png"
+        },
+        {
+          "id": "combo_s4p5i6",
+          "name": "Spicy Lunch Deal",
+          "description": "Spicy Jalapeño + Fries + Shake",
+          "price": 16.99,
+          "original_price": 21.97,
+          "image": "assets/burger_spicy_g7h8i9.png"
+        }
+      ]
+    },
+    "late_menu": {
+      "type": "collection",
+      "label": "Late Night Menu",
+      "item_schema": {
+        "id": {
+          "type": "text",
+          "label": "ID"
+        },
+        "name": {
+          "type": "text",
+          "label": "Item Name"
+        },
+        "price": {
+          "type": "number",
+          "label": "Price",
+          "meta": {
+            "format": "currency"
+          }
+        },
+        "image": {
+          "type": "file",
+          "label": "Item Image",
+          "meta": {
+            "accepted_formats": ["png", "jpg"],
+            "path": "assets/"
+          }
+        }
+      },
+      "value": [
+        {
+          "id": "late_c1l2a3",
+          "name": "Classic Forge",
+          "price": 9.49,
+          "image": "assets/burger_classic_d4e5f6.png"
+        },
+        {
+          "id": "late_d7o8u9",
+          "name": "Double Stack",
+          "price": 13.49,
+          "image": "assets/burger_double_p7q8r9.png"
+        },
+        {
+          "id": "late_f1r2i3",
+          "name": "Crispy Fries",
+          "price": 4.99,
+          "image": "assets/fries_j1k2l3.png"
+        }
+      ]
+    }
+  }
+}
